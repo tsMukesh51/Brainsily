@@ -1,8 +1,6 @@
 # Brainsily – Full Stack Application
 
-Brainsily is a full-stack **content management and sharing platform** designed as a “second brain” to organize, manage, and share useful content like Tweets, YouTube videos, and text notes.
-
-This project is a **practice-driven build** focused on strengthening both frontend and backend development using modern technologies.
+Brainsily is a backend-driven application for storing and organizing content (notes, links, ideas), built with a strong emphasis on **clean architecture, data validation, and secure APIs**.
 
 🔗 **Live Demo**: https://brainsily.vercel.app/
 
@@ -13,19 +11,21 @@ This project is a **practice-driven build** focused on strengthening both fronte
 1. [Project Overview](#project-overview)
 2. [Tech Stack](#tech-stack)
 3. [Setup Instructions](#setup-instructions)
-4. [Available Scripts](#available-scripts)
-5. [Features](#features)
+4. [Features](#features)
+5. [Screenshots](#screenshots)
 6. [Acknowledgements](#acknowledgements)
-7. [Screenshots](#screenshots)
 
 ---
 
 ## Project Overview
 
-Brainsily allows users to:
-- Save and organize different types of content
-- Manage content through a clean dashboard
-- Share their curated “brain” publicly via links
+Brainsily allows users to manage their personal knowledge in a structured way, supporting creation, retrieval, and organization of content.
+
+This project focuses on:
+* Designing scalable **REST APIs**
+* Implementing robust **validation with Zod**
+* Handling **authentication and authorization**
+* Structuring a clean full-stack architecture
 
 ---
 
@@ -81,21 +81,30 @@ The Brainsily backend is a MERN-based application built with Express.js, managin
 
 ## Features
 
-- **User Signup**: Create an user account with secure password hashing.
-- **User Login**: Login and receive a JWT for authentication.
-- **Get All Content**: Retrieve a list of courses created by the admin.
-- **Create Content**: Add new content with details like title, body or link, content type like tweet, youtube.
-- **Delete Content**: Delete content.
-- **Share Brain**: Share your brain content by making it public.
-- **View Shared Brain**: View shared brain content by given url.
+* JWT-based authentication & authorization
+* Create and manage notes, links, and content
+* Schema validation using **Zod**
+* Structured API design with clear separation of concerns
+* Responsive frontend with React
 
-Find API Doc in [endpoint.md](./backend/endpoints.md)
+---
 
-- **Welcome Page**: A warm introduction to the application.
-- **Signup & Login**: Authentication system to create or access user accounts.
-- **Dashboard**: A content management interface allowing users to create, view, and manage their content.
-  - Add new content with various `contentFormat` types (e.g., text, tweet, YouTube video, link).
-  - Select and filter content based on type.
+## Engineering Focus
+
+* Clean API design and separation of concerns
+* Strong validation patterns using Zod
+* Secure authentication flows
+* Full-stack integration with clear boundaries
+
+---
+
+## Limitations / Future Improvements
+
+* Add role-based access control (RBAC)
+* Improve search and filtering capabilities
+* Add pagination and indexing optimizations
+* Introduce caching layer (Redis)
+* Add rate limiting for APIs
 
 ---
 
@@ -163,6 +172,9 @@ http://localhost:5173
 | JWT_SECRET | JWT signing key |
 | MONGO_URL  | MongoDB connection string |
 | SHRD_SECRET | Secret for shared links |
+
+
+Find API Doc in [endpoint.md](./backend/endpoints.md)
 
 ---
 
