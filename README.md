@@ -2,7 +2,7 @@
 
 Brainsily is a backend-driven application for storing and organizing content (notes, links, ideas), built with a strong emphasis on **clean architecture, data validation, and secure APIs**.
 
-🔗 **Live Demo**: https://brainsily.vercel.app/
+🔗 **Live Demo**: [brainsily.tsm51.dev](https://brainsily.tsm51.dev/)
 
 ---
 
